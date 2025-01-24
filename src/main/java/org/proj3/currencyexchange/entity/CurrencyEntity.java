@@ -1,13 +1,12 @@
 package org.proj3.currencyexchange.entity;
 
 public class CurrencyEntity {
-    private final int id;
+    private int id;
     private String code;
     private String fullName;
     private String sign;
 
-    public CurrencyEntity(int id, String code, String fullName, String sign) {
-        this.id = id;
+    public CurrencyEntity(String code, String fullName, String sign) {
         this.code = code;
         this.fullName = fullName;
         this.sign = sign;
@@ -17,9 +16,9 @@ public class CurrencyEntity {
         return id;
     }
 
-//    public void setId(int id) {
-//        this.id = id;
-//    }
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getCode() {
         return code;

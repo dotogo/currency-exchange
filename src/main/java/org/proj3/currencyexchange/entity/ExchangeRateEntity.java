@@ -3,13 +3,12 @@ package org.proj3.currencyexchange.entity;
 import java.math.BigDecimal;
 
 public class ExchangeRateEntity {
-    private final int id;
+    private int id;
     private int baseCurrencyId;
     private int targetCurrencyId;
     private BigDecimal rate;
 
-    public ExchangeRateEntity(int id, int baseCurrencyId, int targetCurrencyId, BigDecimal rate) {
-        this.id = id;
+    public ExchangeRateEntity(int baseCurrencyId, int targetCurrencyId, BigDecimal rate) {
         this.baseCurrencyId = baseCurrencyId;
         this.targetCurrencyId = targetCurrencyId;
         this.rate = rate;
@@ -19,9 +18,9 @@ public class ExchangeRateEntity {
         return id;
     }
 
-//    public void setId(int id) {
-//        this.id = id;
-//    }
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public int getBaseCurrencyId() {
         return baseCurrencyId;
