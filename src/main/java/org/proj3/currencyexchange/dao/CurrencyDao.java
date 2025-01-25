@@ -8,7 +8,7 @@ import javax.sql.DataSource;
 import java.sql.*;
 
 public class CurrencyDao {
-    private static final CurrencyDao INSTANCE = new CurrencyDao();
+    private static final CurrencyDao instance = new CurrencyDao();
     private static final DataSource dataSource = DatabaseConfig.getDataSource();
 
     private static final String SAVE_SQL = """
@@ -42,7 +42,7 @@ public class CurrencyDao {
     }
 
     public static CurrencyDao getInstance() {
-        return INSTANCE;
+        return instance;
     }
 
 //    id, base_currency_id, target_currency_id, rate
