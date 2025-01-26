@@ -14,8 +14,7 @@ public class CurrencyService {
 
     public CurrencyEntity save(CurrencyDto currencyDto) {
         CurrencyEntity entity = CurrencyMapper.getInstance().toEntity(currencyDto);
-        currencyDao.save(entity);
-        return entity;  //TODO make correct method
+        return currencyDao.save(entity);
     }
 
     public static CurrencyService getInstance() {
