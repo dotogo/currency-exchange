@@ -1,17 +1,17 @@
 package org.proj3.currencyexchange.util;
 
+import lombok.experimental.UtilityClass;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+@UtilityClass
 public class PropertiesUtil {
     private static final Properties PROPERTIES = new Properties();
 
     static {
         loadProperties();
-    }
-
-    private PropertiesUtil() {
     }
 
     public static String get(String key) {
